@@ -2,9 +2,9 @@
 
 import React from 'react';
 import {BrowserRouter as Router, Navigate, Route, Routes} from 'react-router-dom';
-import routes, {RouteConfig} from './routes'; // 引入路由配置
-import ProtectedRoute from './ProtectedRoute';
-import {IsAuthenticated} from '../utils/auth'; // 引入认证检查函数
+import routes, {RouteConfig} from './routes.tsx'; // 引入路由配置
+import ProtectedRoute from './ProtectedRoute.tsx';
+import {IsAuthenticated} from '../../utils/auth'; // 引入认证检查函数
 
 // 递归函数渲染路由和子路由
 const renderRoutes = (routes: RouteConfig[]) => {

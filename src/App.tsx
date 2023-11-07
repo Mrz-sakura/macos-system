@@ -1,12 +1,14 @@
-import './App.css'
-import AppRouter from "./router/AppRouter.tsx";
+import './App.scss'
+import AppRouter from "./pkg/router/AppRouter.tsx";
+import appStore from "./pkg/store/AppStore.ts";
+import {observer} from "mobx-react-lite";
 
-const App = () => {
+const App = observer(() => {
     return (
-        <div className="App">
+        <div id="app" style={{backgroundImage: `url(${appStore.background})`}}>
             <AppRouter></AppRouter>
         </div>
     )
-}
+})
 
 export default App

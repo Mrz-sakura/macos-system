@@ -1,7 +1,7 @@
 // src/routes.tsx
 
 import React from 'react';
-import DashboardPage from '../pages/Dashboard';
+import DashboardPage from '../../pages/Dashboard';
 
 export interface RouteConfig {
     path: string;
