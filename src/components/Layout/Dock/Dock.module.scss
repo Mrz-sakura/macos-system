@@ -1,9 +1,37 @@
 /* Dock.css */
 .dock {
+  //width: 100%;
+  position: fixed;
+  left: 50%;
+  bottom: 10px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 10px;
-  background: #ececec; /* 替换为你喜欢的颜色 */
   border-top: 1px solid #ccc; /* 顶部边框 */
+  transform: translateX(-50%);
+  backdrop-filter: blur(1px); /* 模糊效果 */
+  background: #f4f4f9;
+  background: rgba(255, 255, 255, 0.5); /* 透明背景 */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* 底边线条 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+  border-radius: 10px;
+
+  padding: 0 10px;
+  height: 66px;
+}
+
+.dockWrap {
+  display: flex;
+  align-items: center;
+  line-height: 0;
+
+}
+
+.dockItemIcon {
+  margin: 0 5px;
+
+  img {
+    width: 50px;
+    height: 50px;
+  }
 }
