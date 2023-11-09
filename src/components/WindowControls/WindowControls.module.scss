@@ -1,0 +1,43 @@
+.window-controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 24px;
+  padding: 0 10px;
+}
+
+.control {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+}
+
+.close {
+  background-color: #ff5f56;
+}
+
+.minimize {
+  background-color: #ffbd2e;
+}
+
+.maximize {
+  background-color: #27c93f;
+}
+
+.control:hover svg {
+  fill: #fff;
+}
+
+svg {
+  width: 10px;
+  height: 10px;
+  fill: #000;
+  transition: fill 0.2s;
+}

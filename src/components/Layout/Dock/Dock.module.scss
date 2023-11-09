@@ -29,6 +29,14 @@
 
 .dockItemIcon {
   margin: 0 5px;
+  cursor: pointer;
+  transform: scale(1);
+  transition: all 0.2s linear;
+
+  :hover {
+    transform: scale(1.2);
+    transition: all 0.2s linear;
+  }
 
   img {
     width: 50px;
