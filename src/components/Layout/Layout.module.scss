@@ -5,15 +5,16 @@
   height: 100vh; /* 使用全部视窗高度 */
 }
 
-.status-bar-container {
+.statusBarContainer {
   /* 状态栏样式，可能需要根据StatusBar.css调整 */
 }
 
-.content-container {
+.contentContainer {
   flex-grow: 1; /* 内容区域使用可用空间 */
   overflow: auto; /* 如果内容过多，允许滚动 */
 }
 
-.dock-container {
+.dockContainer {
   /* Dock栏样式，可能需要根据Dock.css调整 */
+  height: $dock-position-bottom + $dock-height;
 }
