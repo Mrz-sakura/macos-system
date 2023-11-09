@@ -1,5 +1,9 @@
+import WindowControls from "../../components/WindowControls";
+
 const Dashboard = () => {
-    return <div></div>;
+    return <div>
+        <WindowControls appName="Finder"></WindowControls>
+    </div>;
 };
 
 export default Dashboard;

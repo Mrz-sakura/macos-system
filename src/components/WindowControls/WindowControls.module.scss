@@ -1,9 +1,11 @@
-.window-controls {
+.windowControls {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  //justify-content: flex-end;
   align-items: center;
   height: 24px;
   padding: 0 10px;
+  width: 100px;
 }
 
 .control {
@@ -13,31 +15,56 @@
   margin-left: 5px;
   cursor: pointer;
   transition: background-color 0.2s;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
 
   &:hover {
     background-color: #e5e5e5;
+  }
+
+  &:hover::before {
+    opacity: 1;
   }
 }
 
 .close {
   background-color: #ff5f56;
+
+  &::before {
+    content: '✕'; /* 使用适当的关闭符号，可以是字体图标或SVG图标 */
+    color: white;
+    font-size: 10px;
+  }
 }
 
 .minimize {
   background-color: #ffbd2e;
+
+  &::before {
+    content: '─'; /* 使用适当的最小化符号，可以是字体图标或SVG图标 */
+    color: white;
+    font-size: 10px;
+  }
 }
 
 .maximize {
   background-color: #27c93f;
-}
 
-.control:hover svg {
-  fill: #fff;
-}
-
-svg {
-  width: 10px;
-  height: 10px;
-  fill: #000;
-  transition: fill 0.2s;
+  &::before {
+    content: '➖'; /* 使用适当的最大化符号，可以是字体图标或SVG图标 */
+    color: white;
+    font-size: 10px;
+  }
 }

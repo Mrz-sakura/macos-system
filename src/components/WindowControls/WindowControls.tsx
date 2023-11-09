@@ -1,16 +1,23 @@
 import React from 'react';
-import {observer} from 'mobx-react-lite';
 import {useStores} from "../../pkg/store/StoreContext.tsx";
 import styles from './WindowControls.module.scss';
 
 interface WindowControlsProps {
     appName: string;
-    onClose: () => void;
-    onMinimize: () => void;
-    onMaximize: () => void;
+    onClose?: () => void;
+    onMinimize?: () => void;
+    onMaximize?: () => void;
 }
 
-const WindowControls: React.FC<WindowControlsProps> = ({appName, onClose, onMinimize, onMaximize}) => {
+const voidFunc = () => {
+};
+
+const WindowControls: React.FC<WindowControlsProps> = ({
+                                                           appName,
+                                                           onClose = voidFunc,
+                                                           onMinimize = voidFunc,
+                                                           onMaximize = voidFunc
+                                                       }) => {
     const {appStore} = useStores();
 
     const handleMinimize = () => {
@@ -46,4 +53,4 @@ const WindowControls: React.FC<WindowControlsProps> = ({appName, onClose, onMini
     );
 };
 
-export default observer(WindowControls);
+export default WindowControls;

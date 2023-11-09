@@ -24,14 +24,20 @@ class AppStore {
     }
 
     minimizeApp(appName: string) {
+        if (!this.apps[appName]) this.initializeApp(appName);
+
         this.apps[appName].isMinimized = true;
     }
 
     maximizeApp(appName: string) {
+        if (!this.apps[appName]) this.initializeApp(appName);
+
         this.apps[appName].isMaximized = true;
     }
 
     closeApp(appName: string) {
+        if (!this.apps[appName]) this.initializeApp(appName);
+
         this.apps[appName].isClosed = true;
     }
 
