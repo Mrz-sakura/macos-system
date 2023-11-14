@@ -1,0 +1,10 @@
+.time {
+  word-spacing: 4px;
+  width: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: $font-size-sm;
+}

@@ -10,7 +10,11 @@ export default defineConfig({
     css: {
         preprocessorOptions: {
             scss: {
-                additionalData: `@import "${resolve(__dirname, 'src/assets/styles/variables.scss')}";`, // 引入全局变量
+                additionalData: `
+                                  @import "${resolve(__dirname, 'src/assets/styles/variables.scss')}";
+                                  @import "${resolve(__dirname, 'src/assets/styles/chat.var.scss')}";
+                                  /* Add more @import statements if needed */
+                                `, // 引入全局变量
             },
         },
     },

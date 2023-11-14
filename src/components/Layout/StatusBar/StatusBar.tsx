@@ -1,14 +1,16 @@
 import React from 'react';
 import styles from './StatusBar.module.scss';
-import {useStores} from "../../../pkg/store/StoreContext.tsx";
+// import {useStores} from "../../../pkg/store/StoreContext.tsx";
 import {Apple} from "@icon-park/react";
+
+import StatusBarConfig from "../../../config/statusBar.tsx";
 
 interface StatusBarProps {
 
 }
 
 const StatusBar: React.FC<StatusBarProps> = () => {
-    const {statusBarStore} = useStores()
+    // const {statusBarStore} = useStores()
 
     return (
         <div className={styles.statusBar}>
@@ -21,12 +23,11 @@ const StatusBar: React.FC<StatusBarProps> = () => {
                 <div className={styles.appContextMenuItem}>编辑</div>
             </div>
             <div className={styles.appStatusMenu}>
-                <div className={styles.statusBarItem}>{statusBarStore.time}</div>
-                <div className={styles.statusBarItem}>
-                    {statusBarStore.wifiConnected ? 'WiFi Connected' : 'No WiFi'}
-                </div>
-                <div className={styles.statusBarItem}>Battery: {statusBarStore.batteryLevel}%</div>
-                {/* 添加更多状态信息... */}
+                {
+                    StatusBarConfig.map((item, index) => {
+                        return <div key={index} className={styles.statusBarItem}>{item.components}</div>
+                    })
+                }
             </div>
         </div>
     );

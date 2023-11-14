@@ -5,19 +5,21 @@
   align-items: center;
   justify-content: space-between;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* macOS字体 */
-  color: #333; /* 字体颜色 */
   font-size: 12px;
   height: 40px;
+  color: #fff;
 }
 
-.status-bar-item {
+.statusBarItem {
   display: flex;
   align-items: center;
-  margin: 0 10px; /* 项目间距 */
+  margin: 0 8px; /* 项目间距 */
+  font-size: 0;
+  gap: 0;
 }
 
 .commonMenu {
-  backdrop-filter: blur(10px); /* 模糊效果 */
+  backdrop-filter: blur(30px); /* 模糊效果 */
   background: #f4f4f9;
   background: rgba(255, 255, 255, 0.5); /* 透明背景 */
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* 底边线条 */
@@ -26,6 +28,7 @@
   display: flex;
   padding: 4px 10px;
   align-items: center;
+  height: 100%;
 }
 
 .appContextMenu {
@@ -38,12 +41,10 @@
 }
 
 .appContextMenuItem {
-  color: #fff;
   padding: 0px 11px;
 }
 
 .appContextMenuName {
-  color: #fff;
   padding: 0px 11px;
   font-weight: bolder;
 }
