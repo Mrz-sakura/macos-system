@@ -1,0 +1,15 @@
+.popover {
+  min-width: 160px;
+  //background: #ffffff;
+  //background-clip: padding-box;
+  //background: #333;
+  color: #333;
+  font-weight: bold;
+  padding: 4px 8px;
+  font-size: 13px;
+  border-radius: 4px;
+  //display: none;
+  background-color: rgba(227, 227, 227, 0.76); // 半透明背景
+  backdrop-filter: blur(10px); // 毛玻璃效果
+  outline: 0;
+}

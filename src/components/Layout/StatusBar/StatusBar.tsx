@@ -5,6 +5,8 @@ import {Apple} from "@icon-park/react";
 
 import StatusBarConfig from "../../../config/statusBar.tsx";
 
+import StatusPopover from "../../StatusBarPopover/StatusBarPopover.tsx";
+
 interface StatusBarProps {
 
 }
@@ -15,10 +17,14 @@ const StatusBar: React.FC<StatusBarProps> = () => {
     return (
         <div className={styles.statusBar}>
             <div className={styles.appContextMenu}>
-                <div className={styles.appStatusLogo}>
-                    <Apple theme="filled" size="18" fill="#fff"/>
-                </div>
-                <div className={styles.appContextMenuName}>WebStorm</div>
+                <StatusPopover content={<div>Popover 内容</div>}>
+                    <div className={styles.appStatusLogo}>
+                        <Apple theme="filled" size="18" fill="#fff"/>
+                    </div>
+                </StatusPopover>
+                <StatusPopover content={<div>Popover 内容</div>}>
+                    <div className={styles.appContextMenuName}>WebStorm</div>
+                </StatusPopover>
                 <div className={styles.appContextMenuItem}>文件</div>
                 <div className={styles.appContextMenuItem}>编辑</div>
             </div>
